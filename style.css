@@ -1,0 +1,112 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  /*spec var for each color class below*/
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*standard*/
+}
+
+body,
+button {
+  font-family: 'Lexend Deca', cursive; /*for the whole body and button. ok for button here since no other styling made to the body*/
+}
+
+h3 {
+  font-family: 'Big Shoulders Display', sans-serif; /*font spec to h3*/
+  text-transform: uppercase; /*makes all caps*/
+  font-size: 27px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.btn {
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  padding: 10px 20px; /*when 2 numbers: 10px T/B, 20px L/R*/
+  cursor: pointer;
+}
+
+.bright-orange {
+  background-color: var(--bright-orange);
+  color: #fff; /*text will be white*/
+  border-radius: 10px 10px 0 0; /*creates curved corners at sedan top-L & top-R only*/
+}
+
+.bright-orange .btn {
+  color: var(--bright-orange); /*text on button the same color*/
+}
+
+.dark-cyan {
+  background-color: var(--dark-cyan);
+  color: #fff; /*text will be white*/
+}
+
+.dark-cyan .btn {
+  color: var(--dark-cyan); /*text on button the same color*/
+}
+
+.very-dark-cyan {
+  background-color: var(--very-dark-cyan);
+  color: #fff; /*text will be white*/
+  border-radius: 0 0 10px 10px; /*creates curved corners at luxury bottom-L & bottom-R only*/
+}
+
+.very-dark-cyan .btn {
+  color: var(--very-dark-cyan); /*text on button the same color*/
+}
+
+.container {
+  padding: 20px; /*all around - moves the actual container inward from the page's margin*/
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  padding: 50px; /*all around - moves all the text inward from the container's edges, top, & bottom*/
+}
+
+.card img {
+  margin-bottom: 23px; /*adds space between img/icons and sedan-suvs-luxury headers*/
+}
+
+.card h3 {
+  margin-bottom: 18px; /*adds space between sedan-suvs-luxury headers and paragraphs*/
+}
+
+.card-text {
+  margin-bottom: 30px; /*adds space between paragraphs and buttons*/
+  min-height: 154px;
+}
+
+@media screen and (min-width: 375px) and (max-width: 1440px) {
+  .container {
+    display: flex;
+    /*display: flex !important; this works too*/
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 100%; /*container moves inward/narrow*/
+    margin: auto; /*helps keep container in center*/
+  }
+
+  .bright-orange {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .very-dark-cyan {
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+
